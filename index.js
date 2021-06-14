@@ -31,7 +31,8 @@ app.get('/', (req, res) => {
     res.sendFile(absolutePath);
 });
 
-app.post('/api/fileAnalyze', upload.single('upfile'), (req, res) => {
+app.post('/api/fileanalyse', upload.single('upfile'), (req, res) => {
+    console.log("hello");
     let fileName = req.file.filename;
     let fileType = req.file.mimetype;
     let fileSize = req.file.size;
